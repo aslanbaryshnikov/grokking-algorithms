@@ -34,7 +34,7 @@ Write out the code for the sum function that recursively sums all the elements o
 	<summary>Solution on JavaScript (ES6 syntax)</summary>
 
 ```js
-// Recursive summation of array elements
+// Recursively summation of array elements
 const sum = (arr) => arr.length === 1
 	? arr.shift()
 	: arr.shift() + sum(arr);
@@ -74,7 +74,7 @@ Find the maximum number in a array.
 	<summary>Solution on JavaScript (ES6 syntax)</summary>
 
 ```js
-// Recursively find the maximum number in a array
+// Recursively finding the maximum number in an array
 const getMax = (arr) => {
 	if (arr.length === 2) {
 		return arr[0] > arr[1] ? arr[0] : arr[1];
