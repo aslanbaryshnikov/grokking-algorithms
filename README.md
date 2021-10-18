@@ -6,7 +6,8 @@
 
 ![Land problem](images/land_problem.jpg?raw=true "Land problem")
 
-Solution on JavaScript (ES6 syntax):
+<details>
+	<summary>Solution on JavaScript (ES6 syntax)</summary>
 
 ```js
 // Recursive search for the greatest common divisor
@@ -23,12 +24,14 @@ const findGCD = (num1, num2) => {
 // Print the answer to the problem
 console.log(findGCD(1680, 640)); // 80
 ```
+</details>
 
 ### Exercise 4.1
 
 Write out the code for the sum function that recursively sums all the elements of the array.
 
-Solution on JavaScript (ES6 syntax):
+<details>
+	<summary>Solution on JavaScript (ES6 syntax)</summary>
 
 ```js
 // Recursive summation of array elements
@@ -40,35 +43,35 @@ const sum = (arr) => arr.length === 1
 const arr = [3, 2, 6, 9];
 console.log(sum(arr)); // 20
 ```
+</details>
+
 ### Exercise 4.2
 
 Write a recursive function to count the number of elements in a array.
 
-Solution on JavaScript (ES6 syntax):
+<details>
+	<summary>Solution on JavaScript (ES6 syntax)</summary>
 
 ```js
 // Recursively counting the number of elements in an array
-// Warning: the function assumes that the array will not contain undefined values.
 const getElementsCount = (arr) => {
-	return arr[0] === undefined
+	return arr.length === 0
 		? 0
-		: arr.shift()*0 + 1 + getElementsCount(arr);
+		: 1 + getElementsCount(arr.slice(1));
 };
 
 // Print the count of elements in an array
 const arr = [2, 7, 47, 3, 99];
 console.log(getElementsCount(arr)); // 5
-
-// Will print 3, see line 2 for the reason
-const invalidArr = [2, 7, 47, undefined, 3, 99];
-console.log(getElementsCount(invalidArr)); // 3
 ```
+</details>
 
 ### Exercise 4.3
 
 Find the maximum number in a array.
 
-Solution on JavaScript (ES6 syntax):
+<details>
+	<summary>Solution on JavaScript (ES6 syntax)</summary>
 
 ```js
 // Recursively find the maximum number in a array
@@ -84,3 +87,4 @@ const getMax = (arr) => {
 const arr = [5, 2, 1, 18, 9];
 console.log(getMax(arr)); // 18
 ```
+</details>
