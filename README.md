@@ -63,3 +63,24 @@ console.log(getElementsCount(arr)); // 5
 const invalidArr = [2, 7, 47, undefined, 3, 99];
 console.log(getElementsCount(invalidArr)); // 3
 ```
+
+### Exercise 4.3
+
+Find the maximum number in a array.
+
+Solution on JavaScript (ES6 syntax):
+
+```js
+// Recursively find the maximum number in a array
+const getMax = (arr) => {
+	if (arr.length === 2) {
+		return arr[0] > arr[1] ? arr[0] : arr[1];
+	}
+	const tempMax = getMax(arr.slice(1));
+	return arr[0] > tempMax ? arr[0] : tempMax;
+};
+
+// Print the maximum number in a array
+const arr = [5, 2, 1, 18, 9];
+console.log(getMax(arr)); // 18
+```
